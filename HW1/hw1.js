@@ -4,18 +4,23 @@
  Задание 1:
  Функция должна принимать один аргумент и возвращать его
  */
- function returnFirstArgument(arg) {
-
+ const returnFirstArgument = (arg) => {
+    return arg
 }
+
+console.log(returnFirstArgument(3))
 
 /*
 Задание 2:
 Функция должна принимать два аргумента и возвращать сумму переданных значений
 Значение по умолчанию второго аргумента должно быть 100
 */
-function defaultParameterValue(a, b = 100) {
+const defaultParameterValue = (a, b = 100) => {
 
+    return a+b
 }
+
+console.log(defaultParameterValue(23, 15))
 
 /*
 Задание 3:
@@ -30,9 +35,18 @@ function returnArgumentsArray() {
 Задание 4:
 Функция должна принимать другую функцию и возвращать результат вызова переданной функции
 */
-function returnFnResult(func) {
-
+function returnFnResult(func) { 
+   
+    return func()
 }
+
+const func2 = () => {
+    let b = 101
+    return b
+}
+
+
+console.log(returnFnResult(func2))
 
 /*
 Задание 5:
@@ -40,8 +54,12 @@ function returnFnResult(func) {
 При вызове F, переданное число должно быть увеличено на единицу и возвращено из F
 */
 function returnCounter(number = 0) {
-
-}
+    const F = () => {
+        return ++ number
+    }
+    return F()
+    }
+console.log(returnCounter())
 
 /*
 Задание 6 *:
